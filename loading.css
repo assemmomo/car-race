@@ -1,0 +1,11 @@
+#loadingScreen{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:24px;box-sizing:border-box;direction:rtl;text-align:center;color:#edf3f8;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;background:radial-gradient(ellipse at 50% 38%,#14314d 0%,#08121e 70%);transition:opacity .45s ease}
+#loadingScreen.fade{opacity:0;pointer-events:none}
+#loadingScreen .ld-kicker{font-size:13px;letter-spacing:4px;color:#7fb8e6;margin:0}
+#loadingScreen .ld-title{margin:0;font-size:clamp(30px,7vw,64px);font-weight:800;line-height:1.2;background:linear-gradient(180deg,#fff,#b9d8f0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#loadingScreen .ld-road{position:relative;width:min(360px,78vw);height:6px;border-radius:6px;background:rgba(255,255,255,.12);overflow:hidden}
+#loadingScreen .ld-bar{position:absolute;inset:0 auto 0 0;width:0;border-radius:6px;background:linear-gradient(90deg,#3fb4ff,#9be0ff);transition:width .35s ease}
+#loadingScreen .ld-shine{position:absolute;top:0;bottom:0;width:60px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);animation:ldShine 1.3s linear infinite}
+@keyframes ldShine{from{transform:translateX(-80px)}to{transform:translateX(420px)}}
+#loadingScreen .ld-text{margin:0;font-size:15px;color:#b6c7d6;min-height:1.4em}
+#loadingScreen.err .ld-text{color:#ff9a8a}
+#loadingScreen.err .ld-shine{display:none}
